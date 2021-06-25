@@ -6,13 +6,13 @@ export default function Notes() {
 
   const [notes, setNotes] = useState([])
   useEffect(() => {
-    fetch("http://localhost:3000/notes")
+    fetch("https://my-json-server.typicode.com/BhumiSharma2000/ReactII/notes")
       .then(res => res.json())
       .then(data => setNotes(data))
   }, [])
 
   const handleDelete = async (id) => {
-    await fetch('http://localhost:3000/notes/' + id, {
+    await fetch('https://my-json-server.typicode.com/BhumiSharma2000/ReactII/notes' + id, {
       method: 'DELETE'
     })
 

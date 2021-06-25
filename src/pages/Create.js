@@ -41,7 +41,7 @@ export default function Create() {
       setDetailError(true)
     }
     if (title && detail) {
-      fetch("http://localhost:3000/notes",{
+      fetch("https://my-json-server.typicode.com/BhumiSharma2000/ReactII/notes",{
         method:'POST',
         headers:{"Content-type":"application/json"},
         body:JSON.stringify({title,detail,category})
